@@ -8,7 +8,7 @@ resource "aws_instance" "wordpress_instance" {
   subnet_id     = "subnet-027e97b03510547df"  # Replace with your subnet ID
   key_name      = "bungyan"  # Replace with your key pair name
 
-  user_data = file("${path.module}/userdata.sh")
+  user_data = file("${path.module}/setup_wordpress.sh")
 
   tags = {
     Name = "wordpress-instance"

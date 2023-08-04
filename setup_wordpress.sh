@@ -24,8 +24,8 @@ sudo systemctl restart apache2
 echo "<VirtualHost *:80>
     ServerAdmin admin@example.com
     DocumentRoot /usr/share/wordpress
-    ServerName example.com
-    ServerAlias www.example.com
+    ServerName http://ec2-18-142-181-133.ap-southeast-1.compute.amazonaws.com
+    ServerAlias http://ec2-18-142-181-133.ap-southeast-1.compute.amazonaws.com
 
     <Directory /usr/share/wordpress>
         AllowOverride All
@@ -42,4 +42,4 @@ sudo systemctl reload apache2
 sudo ufw allow 80/tcp
 
 # Output a success message
-echo "WordPress has been successfully installed. Access your site at http://http://ec2-18-142-181-133.ap-southeast-1.compute.amazonaws.com/wp-admin/"
+echo "WordPress has been successfully installed. Access your site at http://ec2-18-142-181-133.ap-southeast-1.compute.amazonaws.com/wp-admin/"
